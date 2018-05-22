@@ -1,0 +1,898 @@
+/*
+	Theme Name: Canfriskvård
+	Theme URI: ""
+	Author: Daniel Levén
+	Version: 1.0
+*/
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0px;
+}
+
+main {
+	display: block;
+	position: relative;
+	margin: auto;
+	width: 100%;
+	min-height: 100%;
+	/* padding-bottom: 200px; */
+    border: 15px solid rgba(61,179,182,0.4);
+}
+
+@media only screen and (min-width: 769px) {
+main {
+    border: 20px solid rgba(61,179,182,0.4);
+}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.wrapper {
+	width: 90%;
+	margin: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+/* Header ----------------------------------------------------------------*/
+
+.header-wrapper{
+	position: relative;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    display: grid;
+	grid-template-columns: 1fr;
+	/* grid-template-rows: 85px; */
+}
+
+.line-break {
+	height: 3px;
+	margin-right: 36px;
+	background-color: #47014A;
+}
+
+.header-contact-info {
+	background-color: rgba(241,235,247,0.5);
+	font-size: 16px;
+	line-height: 19px;
+	grid-row-start: 2;
+	display: none;
+	text-align: left;
+	padding-left: 35px;
+}
+
+.header-contact-info a {
+	position: relative;
+	color: #47014A;
+	text-decoration: none;
+	margin-bottom: 32px;
+}
+
+.header-contact-info div {
+	margin-bottom: 32px;
+}
+
+.logga {
+    display: inline-block;
+    width: 100%;
+    margin:16px 0 24px 0;
+	grid-row-start: 3;
+	text-align: center;
+}
+
+.img-logga {
+	width: 145px;
+	height: 66px;
+}
+
+.header-menu {
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-row-start: 1;
+	margin: 0;
+	background-color: rgba(241,235,247,0.5);
+}
+
+.hamburger {
+	margin: 8px 24px 8px 0;;
+	justify-self: end;
+}
+
+.hamburger .line{
+	position: relative;
+	z-index: 5;
+	width: 25px;
+	height: 2px;
+	background-color: #47014A;
+	display: block;
+	margin: 7px 0;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.hamburger:hover{
+	cursor: pointer;
+}
+
+#hamburger-1.is-active {
+
+}
+
+#hamburger-1.is-active .line {
+	background-color: #47014A;
+	width: 20px;
+}
+
+#hamburger-1.is-active .line:nth-child(2){
+  opacity: 0;
+}
+
+#hamburger-1.is-active .line:nth-child(1){
+  -webkit-transform: translateY(13px) rotate(45deg);
+  -ms-transform: translateY(13px) rotate(45deg);
+  -o-transform: translateY(13px) rotate(45deg);
+  transform: translateY(9px) rotate(45deg);
+}
+
+#hamburger-1.is-active .line:nth-child(3){
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  -ms-transform: translateY(-13px) rotate(-45deg);
+  -o-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-menu {
+	display: none;
+    font-size: 16px;
+    line-height: 48px;
+    margin: 0px 0 0px 35px;
+}
+
+.nav-menu .current-menu-item a {
+	color: #47014A;
+	font-weight: bold;
+}
+
+.nav-menu ul {
+	display: inline-block;
+	width: 100%;
+	list-style: none;
+	padding: 0;
+    margin: 0px 0 0 0;
+	text-align: left;
+}
+
+.nav-menu li {
+	display: block;
+	padding-top: 0px;
+    margin-right: 0px;
+}
+
+.nav-menu li:nth-last-child(1) {
+	margin-right: 0px;
+}
+
+.nav-menu a {
+	color: #47014A;
+	text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-menu a:hover {
+
+}
+
+@media only screen and (min-width: 769px) {
+
+.header-contact-info {
+	display: inline-block !important;
+	height: 48px;
+	background-color: rgba(241,235,247,0.5);
+	font-size: 16px;
+	line-height: 48px;
+	text-align: left;
+	padding-left: 28px;
+	grid-row-start: 1;
+}
+
+.line-break {
+	display: none;
+}
+
+.header-contact-info div {
+	display: inline-block;
+	margin: 0;
+}
+
+.header-contact-info a {
+	color: #47014A;
+	text-decoration: none;
+}
+
+.header-contact-info a:nth-child(1) {
+	margin-right: 32px;
+}
+
+.logga {
+    margin: 56px 0px;
+	grid-row-start: 2;
+}
+
+.img-logga {
+	width: 307px;
+    height: 139px;
+}
+
+.header-menu {
+	justify-self: center;
+	margin: 15px 24px 0px 0;
+	background-color: #fff;
+	grid-row-start: 3;
+}
+
+.hamburger {
+	display: none !important;
+}
+
+.nav-menu {
+	display: inline-block !important;
+}
+
+.nav-menu ul {
+	display: inline-block !important;
+	position: relative !important;
+	padding: 0px 0px 0px 10px;
+}
+
+.nav-menu li {
+	display: inline-block !important;
+	padding-top: 0px;
+	padding-right: 40px;
+}
+
+.nav-menu li:nth-last-child(1) {
+	padding-right: 0px;
+}
+
+}
+
+@media only screen and (min-width: 968px) {
+.nav-menu li {
+	padding-right: 91px;
+}
+}
+
+/* Header End ----------------------------------------------------------------*/
+
+/* Homepage ------------------------------------------------------------------*/
+
+.home-grid-block-one {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+	grid-template-rows: 25%;
+}
+
+.img-intro {
+    display: none;
+}
+
+.intro-left {
+    background-color: #155254;
+	padding: 0;
+}
+
+.intro-heading {
+	width: 85.5%;
+	margin: auto;
+	color: #3DB3B6;
+	margin-bottom: 17px;
+	margin-top: 24px;
+}
+
+.intro-heading h1 {
+	font-size: 32px;
+	line-height: 40px;
+	font-weight: bold;
+}
+
+.intro-textfield {
+	width: 85.5%;
+	margin: auto;
+	font-size: 16px;
+	line-height: 28px;
+	color: #fff;
+	margin-bottom: 56px;
+}
+
+.intro-buttons {
+	width: 248px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 16px;
+	margin: auto;
+	margin-bottom: 26.95%;
+}
+
+.intro-buttons a {
+	text-decoration: none;
+}
+
+.booking-button {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 21px;
+	text-align: center;
+	color: #FFF;
+	background-color: #3DB3B6;
+	padding: 18px 0;
+}
+
+.products-button {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 21px;
+	text-align: center;
+	color: #FFF;
+	padding: 18px 0;
+	border: 1px solid #FFFFFF;
+}
+
+.home-grid-block-two {
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	background-color: #F1EBF7;
+}
+
+.event-grid-block {
+	width: 88.9655%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.post-img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.event-block {
+	background-color: #fff;
+	margin-top: -44px;
+	color: #47014A;
+}
+
+.event-block a {
+	text-decoration: none;
+	color: #47014A;
+}
+
+.event-block-content {
+	width: 85%;
+	margin: auto;
+	margin-top: 26px;
+	margin-bottom: 50px;
+}
+
+.event-cat {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 19px;
+}
+
+.event-title {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 40px;
+	margin: 16px 0;
+}
+
+.event-content {
+	font-size: 16px;
+	line-height: 32px;
+	margin-bottom: 32px;
+}
+
+.read-more-link {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 21px;
+}
+
+.read-more-link span {
+	padding-bottom: 6px;
+	border-bottom: 2px solid #47014A;
+}
+
+.email-block {
+	width: 100%;
+	height: 412px;
+	color: #47014A;
+	margin: 48px 0;
+}
+
+.email-titel {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+}
+
+.email-text {
+	font-size: 16px;
+	line-height: 32px;
+	margin: 16px 0 38px 0;
+	text-align: center;
+}
+
+.input-email {
+	width: 100%;
+	height: 56px;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	border: 1px solid #47014A;
+	padding-left: 24px;
+}
+
+.input-email::placeholder {
+	font-size: 16px;
+	line-height: 18px;
+	color: #B1B1B1;
+}
+
+#gdpr-check {
+	width: 21px;
+	height: 21px;
+	vertical-align: top;
+	border: 1px solid #47014A;
+}
+
+.wpcf7 p, span, input {
+	margin: 0;
+}
+
+.wpcf7 p {
+}
+
+.wpcf7-form span .wpcf7-list-item {
+	margin: 0 0 20px 0;
+	/* text-align: left; */
+	/* padding-right: 20px; */
+}
+
+.wpcf7-form span .wpcf7-list-item-label {
+	color: #47014A;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.email-submit-button {
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 21px;
+	border: none;
+    color: #fff;
+	background-color: #47014A;
+	padding: 18px 0;
+}
+
+
+.home-grid-block-three {
+	display: inline-block;
+	width: 100%;
+}
+
+.comment-block {
+	position: relative;
+	width: 88.85%;
+	height: 530px;
+	background-color: #47014A;
+	margin: 64px auto;
+}
+
+.quotes {
+	font-size: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: #fff;
+	padding-top: 40px;
+}
+
+.comment-content {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	margin-top: -40px;
+}
+
+#slider_25 .owl-dots span {
+	background-color:rgba(255,255,255,0.4) !important;
+}
+
+#slider_25 .owl-dots .active span {
+	background-color:rgba(255,255,255,1) !important;
+}
+
+#slider_25 .owl-item {
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 32px;
+	padding: 0px 14px 30px;
+}
+
+#slider_25 .owl-nav .owl-prev {
+	background:rgba(0,0,0,0) url('http://media.dev.canfriskvard.nu/2018/05/icon_prev.png') no-repeat center center !important;
+	margin-top: -63px!important;
+	margin-left: 60px!important;
+}
+
+#slider_25 .owl-nav .owl-next {
+	background:rgba(0,0,0,0) url('http://media.dev.canfriskvard.nu/2018/05/icon_next.png') no-repeat center center !important;
+	margin-top: -63px!important;
+	margin-right: 60px!important;
+}
+
+#slider_25 .owl-dot {
+	padding: 0 20px!important;
+}
+
+@media only screen and (min-width: 376px) {
+	#slider_25 .owl-item {
+		font-size: 20px;
+		line-height: 36px;
+		padding: 0px 24px 30px;
+	}
+}
+
+@media only screen and (min-width: 426px) {
+	.email-block {
+		width: 80%;
+	}
+
+	.intro-buttons {
+		margin-bottom: 16%;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	#slider_25 .owl-item {
+		padding: 0px 60px 80px;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+
+.home-grid-block-one {
+    grid-template-columns: 58.5% 1fr;
+}
+
+.img-intro {
+	display: inline-block;
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.intro-left {
+	padding: 9.756% 18.78% 0 9.756%;
+}
+
+.intro-heading {
+	margin: 24px 0 17px 0;
+}
+
+.intro-textfield {
+	font-size: 24px;
+	line-height: 40px;
+	color: #fff;
+	margin: 0 0 56px 0;
+}
+
+.event-block {
+	margin-top: -80px;
+}
+
+.intro-buttons {
+	grid-template-columns: 220px 220px;
+	grid-column-gap: 3.048%;
+	margin: 0 0 26.95% 0;
+}
+
+.home-grid-block-two {
+	display: grid;
+	grid-template-columns: 100%;
+}
+
+.event-grid-block {
+	grid-template-columns: 42.5% 32.5%;
+	grid-template-rows: 100%;
+	grid-column-gap: 12.46%;
+	margin: 0px 0px 8.35% 10.28%;
+}
+
+.email-block {
+	width: 100%;
+	margin-top: 134px;
+}
+
+.input-email {
+	/* width: 368.88px; */
+	height: 56px;
+	font-size: 16px;
+	line-height: 18px;
+	margin-bottom: 20px;
+	padding-left: 24px;
+}
+
+.quotes {
+	padding-top: 80px;
+}
+
+.comment-block {
+	width: 88.85%;
+	height: 514px;
+	margin: 64px auto;
+}
+
+#slider_25 .owl-item {
+	padding: 0px 60px 80px;
+}
+
+#slider_25 .owl-dot {
+	padding: 0 28px!important;
+}
+
+}
+
+@media only screen and (min-width: 912px) {
+#slider_25 .owl-item {
+	font-size: 24px;
+	line-height: 48px;
+	padding: 0px 120px 0px;
+}
+}
+
+@media only screen and (min-width: 1025px) {
+#slider_25 .owl-item {
+	padding: 0px 180px 0px;
+}
+}
+
+@media only screen and (min-width: 1154px) {
+#slider_25 .owl-item {
+	padding: 0px 240px 0px;
+}
+}
+
+/* Homepage End --------------------------------------------------------------*/
+
+/* About ---------------------------------------------------------------------*/
+.about-wrapper {
+	width: 100%;
+	background-color: #F1EBF7;
+	padding-top: 112px;
+	padding-bottom: 261px;
+	margin-bottom: -194px;
+}
+
+.about-grid {
+	width: 87.92%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 24px;
+}
+
+.about-header {
+	font-size: 40px;
+	line-height: 47px;
+	font-weight: bold;
+}
+
+.about-content {
+	color: #47014A;
+	background-color: #fff;
+	font-size: 16px;
+	line-height: 32px;
+	padding: 60px 10px 80px;
+}
+
+.about-content span {
+	font-weight: bold;
+}
+
+.about-content a {
+	color: #47014A;
+	font-weight: bold;
+}
+
+.about-img {
+
+}
+
+.img-about {
+	display: inline-block;
+    width: 100%;
+	height: auto;
+	object-fit: cover;
+	border: 24px solid #fff;
+}
+
+.booking {
+	width: 100%;
+	background-color: #155153;
+	text-align: center;
+	padding: 64px 20px 77px;
+}
+
+.booking p {
+	color: #3DB3B6;
+	font-size: 20px;
+	line-height: 28px;
+	margin-bottom: 54px;
+}
+
+.booking a {
+	text-decoration: none;
+	padding: 22px 0px;
+}
+
+.booking .booking-button {
+	display: block;
+	width: 100%;
+	margin: auto;
+}
+
+.newsletter {
+	background-color: #fff;
+}
+
+.newsletter .email-block {
+	margin: 50px auto 200px;
+	padding: 0 36px;
+}
+
+@media only screen and (min-width: 357px) {
+	.newsletter .email-block {
+		margin: 50px auto 160px;
+	}
+}
+
+@media only screen and (min-width: 426px) {
+	.booking .booking-button {
+		width: 60%;
+	}
+}
+
+@media only screen and (min-width: 670px) {
+	.newsletter .email-block {
+		margin: 50px auto 120px;
+	}
+}
+
+@media only screen and (min-width: 769px) {
+	.about-grid {
+		width: 87.92%;
+		grid-template-columns: 59% 1fr;
+		grid-gap: 24px;
+	}
+
+	.about-content {
+		grid-row: 1 / span 4;
+		font-size: 16px;
+		line-height: 32px;
+		padding: 72px 78px 132px;
+	}
+
+	.booking {
+		padding: 64px 44px 77px;
+	}
+
+	.newsletter {
+		padding-bottom: 60px;
+	}
+
+	.newsletter .email-block {
+		margin: 50px 0px 67px;
+	}
+}
+
+/* About End -----------------------------------------------------------------*/
+
+/* Health ---------------------------------------------------------------------*/
+
+.health-wrapper {
+	width: 100%;
+	background-color: #F1EBF7;
+	padding-bottom: 261px;
+	margin-bottom: -194px;
+}
+
+.health-grid {
+	position: relative;
+	width: 87.92%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 24px;
+	z-index: 2;
+}
+
+.health-header {
+	font-size: 40px;
+	line-height: 47px;
+	font-weight: bold;
+}
+
+.health-content {
+	color: #47014A;
+	background-color: #fff;
+	font-size: 16px;
+	line-height: 32px;
+	padding: 60px 10px 80px;
+}
+
+.health-content span {
+	font-weight: bold;
+}
+
+.health-content a {
+	color: #47014A;
+	font-weight: bold;
+}
+
+.health-img {
+	position: relative;
+	z-index: 0;
+}
+
+.img-health {
+	position: relative;
+	display: inline-block;
+    width: 100%;
+	height: auto;
+	object-fit: cover;
+	margin-bottom: -50%;
+}
+
+@media only screen and (min-width: 769px) {
+	.health-grid {
+		width: 87.92%;
+		grid-template-columns: 59% 1fr;
+		grid-gap: 24px;
+	}
+
+	.health-content {
+		grid-row: 1 / span 4;
+		font-size: 16px;
+		line-height: 32px;
+		padding: 72px 78px 132px;
+	}
+}
+
+/* Health End -----------------------------------------------------------------*/
+
+/* Footer --------------------------------------------------------------------*/
+
+.footer-block {
+	text-align: center;
+}
+
+.footer-content {
+	margin-bottom: 47px;
+	font-size: 20px;
+	line-height: 20px;
+	color: #47014A;
+}
+
+/* Footer End ----------------------------------------------------------------*/
