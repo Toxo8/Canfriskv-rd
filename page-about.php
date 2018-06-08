@@ -24,18 +24,26 @@
         <div class="about-img"><?php the_post_thumbnail('full', array( 'class' => 'img-about' )); ?></div>
 
         <div class="booking">
-            <p>Boka gärna tid hos mig på Mariecare Hälsocentrum i Farsta via knappen nedan!</p>
+            <p>
+                <?php
+                if(get_field('boka_text', 9)){
+                    echo  get_field('boka_text', 9) ;
+                }
+                ?>
+            </p>
             <a class="booking-button" href="http://www.bokadirekt.se/Bookings/Default.aspx?sru=12288" target="_blank">Boka tid</a>
         </div>
 
         <div class="newsletter">
             <div class="email-block">
     			<div class="email-titel">
-    				<?php
-    				if(get_field('nyhetsbrev_rubrik', 2)){
-    					echo  get_field('nyhetsbrev_rubrik', 2) ;
-    				}
-    				?>
+                    <h2>
+        				<?php
+        				if(get_field('nyhetsbrev_rubrik', 2)){
+        					echo  get_field('nyhetsbrev_rubrik', 2) ;
+        				}
+        				?>
+                    </h2>
     			</div>
     			<div class="email-text">
     				<?php

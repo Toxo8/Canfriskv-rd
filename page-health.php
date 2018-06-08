@@ -14,7 +14,7 @@
 
 <div class="health-wrapper">
 
-    <div class="health-img"><?php the_post_thumbnail('full', array( 'class' => 'img-health' )); ?><div class="ghost-div"></div></div>
+    <div class="health-img"><?php the_post_thumbnail('full', array( 'class' => 'img-health' )); ?></div>
 
     <div class="health-grid">
         <?php

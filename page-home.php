@@ -19,29 +19,29 @@
 		while (have_posts()): the_post(); ?>
 
 			<div class="intro-left">
-
-				<div class="intro-heading">
-					<h1>
+				<div class="left-wrap">
+					<div class="intro-heading">
+						<h1>
+							<?php
+							if(get_field('intro_rubrik')){
+								echo  get_field('intro_rubrik') ;
+							}
+							?>
+						</h1>
+					</div>
+					<div class="intro-textfield">
 						<?php
-						if(get_field('intro_rubrik')){
-							echo  get_field('intro_rubrik') ;
+						if(get_field('intro_text')){
+							echo  get_field('intro_text') ;
 						}
 						?>
-					</h1>
-				</div>
-				<div class="intro-textfield">
-					<?php
-					if(get_field('intro_text')){
-						echo  get_field('intro_text') ;
-					}
-					?>
-				</div>
+					</div>
 
-				<div class="intro-buttons">
-					<a class="booking-button" href="http://www.bokadirekt.se/Bookings/Default.aspx?sru=12288" target="_blank">Boka tid</a>
-					<a class="products-button"href="http://www.myaloevera.se/britt" target="_blank">Gå till webshoppen</a>
+					<div class="intro-buttons">
+						<a class="booking-button" href="http://www.bokadirekt.se/Bookings/Default.aspx?sru=12288" target="_blank">Boka tid</a>
+						<a class="products-button"href="http://www.myaloevera.se/britt" target="_blank">Gå till webbshoppen</a>
+					</div>
 				</div>
-
 
 			</div>
 
@@ -65,7 +65,7 @@
 			<div class="event-img"><?php the_post_thumbnail('medium', array( 'class' => 'post-img' )); ?></div>
 			<div class="event-block-content">
 				<div class="event-cat"><?php the_category(" "); ?></div>
-				<div class="event-title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></div>
+				<div class="event-title"><h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2></div>
 				<div class="event-content">
 					<?php
 						$content = get_the_content();
@@ -82,11 +82,13 @@
 
 		<div class="email-block">
 			<div class="email-titel">
-			    <?php
-			    if(get_field('nyhetsbrev_rubrik')){
-			        echo  get_field('nyhetsbrev_rubrik') ;
-			    }
-			    ?>
+				<h2>
+				    <?php
+				    if(get_field('nyhetsbrev_rubrik')){
+				        echo  get_field('nyhetsbrev_rubrik') ;
+				    }
+				    ?>
+				</h2>
 			</div>
 			<div class="email-text">
 			    <?php
@@ -101,6 +103,7 @@
 
 	</div>
 
+</div>
 </div>
 
 <div class="home-block-three">

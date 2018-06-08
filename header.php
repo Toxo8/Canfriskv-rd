@@ -14,7 +14,7 @@
 
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0"/>
-	<title>Dev Canfriskvård</title>
+	<title>Cannervalls Friskvård</title>
 	<?php wp_head(); ?>
 </head>
 
@@ -25,7 +25,7 @@
 <div class="header-wrapper">
 
 	<div class="header-contact-info">
-	<div class="line-break"></div>
+		<div class="line-break"></div>
 		<?php
 			if(get_field('email', 7)){ ?>
 				<div><a href="<?php echo antispambot('mailto:' . get_field('email', 7)); ?> "> &#9993; <?php echo antispambot( get_field('email', 7));?></a></div>

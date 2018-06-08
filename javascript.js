@@ -17,14 +17,5 @@ jQuery(document).ready(function($) {
         }
         e.preventDefault();
     });
-
-    $('#gdpr-check').click(function(e) {
-
-        if($('#gdpr-check').is(':checked')) {
-            $('.email-submit-button').css('pointer-events', 'auto');
-        }
-        else {
-            $('.email-submit-button').css('pointer-events', 'none');
-        }
-    });
+    
 });

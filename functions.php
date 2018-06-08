@@ -1,18 +1,18 @@
 <?php
 
-function detaljeriet_script_enqueue() {
+function canfriskvard_script_enqueue() {
 	wp_enqueue_script('customjs', get_template_directory_uri() . '/javascript.js', array( 'jquery'), '1.0', true);
 	wp_enqueue_style('customstyle', get_template_directory_uri() . '/style.css', array(), '1.0.0', 'all');
 	wp_enqueue_style('googlefont', '//fonts.googleapis.com/css?family=Roboto:400,600,700 ');
 }
-add_action('wp_enqueue_scripts', 'detaljeriet_script_enqueue');
+add_action('wp_enqueue_scripts', 'canfriskvard_script_enqueue');
 
-function detaljeriet_theme_setup(){
+function canfriskvard_theme_setup(){
 
 	add_theme_support('menus');
 
 }
-add_action('after_setup_theme', 'detaljeriet_theme_setup');
+add_action('after_setup_theme', 'canfriskvard_theme_setup');
 
 
 register_sidebar(array(
@@ -27,6 +27,12 @@ function hide_editor() {
   // Hide the editor on the page titled 'Homepage'
   $homepgname = get_the_title($post_id);
   if($homepgname == 'Startsida'){
+    remove_post_type_support('page', 'editor');
+  }
+  if($homepgname == 'Kontakt'){
+    remove_post_type_support('page', 'editor');
+  }
+  if($homepgname == 'Behandlingar'){
     remove_post_type_support('page', 'editor');
   }
 }
